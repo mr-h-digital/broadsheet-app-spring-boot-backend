@@ -3,7 +3,6 @@ package co.za.mrhdigital.wpcbroadsheet.config;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
@@ -23,8 +22,11 @@ public class DatabaseConfig {
     private String databaseUrl;
 
     @Bean
-    @ConditionalOnProperty(name = "DATABASE_URL")
     public DataSource dataSource() throws Exception {
+        if (databaseUrl == null || databaseUrl.isBlank()) {
+            throw new IllegalStateException("DATABASE_URL environment variable is not set. " +
+                "Please configure it in your Railway Variables tab.");
+        }
         URI dbUri = new URI(databaseUrl.replace("postgres://", "http://"));
 
         String username = dbUri.getUserInfo().split(":")[0];
