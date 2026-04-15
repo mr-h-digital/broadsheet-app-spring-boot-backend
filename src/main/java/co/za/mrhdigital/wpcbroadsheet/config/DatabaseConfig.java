@@ -27,7 +27,7 @@ public class DatabaseConfig {
             throw new IllegalStateException("DATABASE_URL environment variable is not set. " +
                 "Please configure it in your Railway Variables tab.");
         }
-        URI dbUri = new URI(databaseUrl.replace("postgres://", "http://"));
+        URI dbUri = new URI(databaseUrl.replaceFirst("^postgres(?:ql)?://", "http://"));
 
         String username = dbUri.getUserInfo().split(":")[0];
         String password = dbUri.getUserInfo().split(":")[1];
