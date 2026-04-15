@@ -1,0 +1,18 @@
+package co.za.mrhdigital.wpcbroadsheet.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class SiteDto {
+    private String id;
+    private String name;
+    private boolean isActive;
+    private long createdAt;
+    private String createdBy;
+    private long lastModifiedAt;
+    private String lastModifiedBy;
+}

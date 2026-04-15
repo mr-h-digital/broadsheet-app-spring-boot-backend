@@ -1,0 +1,52 @@
+# ── Maven ──────────────────────────────────────────────────────────────────────
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# ── IntelliJ IDEA ──────────────────────────────────────────────────────────────
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.idea_modules/
+
+# ── Eclipse ────────────────────────────────────────────────────────────────────
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+
+# ── VS Code ────────────────────────────────────────────────────────────────────
+.vscode/
+
+# ── Spring Boot ────────────────────────────────────────────────────────────────
+spring-shell.log
+
+# ── Logs ───────────────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── OS ─────────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Claude / AI tooling ────────────────────────────────────────────────────────
+.claude/
+.claude-flow/
+
+# ── Secrets / Env ──────────────────────────────────────────────────────────────
+.env
+.env.*
+*.secret
+application-prod.properties
+
+# ── H2 database files (if file-based H2 is ever used) ─────────────────────────
+*.db
+*.mv.db
+*.trace.db

@@ -1,0 +1,14 @@
+# Normalise line endings to LF on commit, checkout as CRLF on Windows
+* text=auto eol=lf
+*.java text eol=lf
+*.xml text eol=lf
+*.properties text eol=lf
+*.md text eol=lf
+*.gitignore text eol=lf
+
+# Treat images as binary — never modify
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary
