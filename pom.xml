@@ -73,14 +73,12 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- PostgreSQL driver (uncomment for production) -->
-        <!--
+        <!-- PostgreSQL driver -->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <scope>runtime</scope>
         </dependency>
-        -->
 
         <!-- ── Utilities ─────────────────────────────────────────────────── -->
         <dependency>

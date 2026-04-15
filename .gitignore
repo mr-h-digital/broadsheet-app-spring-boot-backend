@@ -44,7 +44,7 @@ Thumbs.db
 .env
 .env.*
 *.secret
-application-prod.properties
+# application-prod.properties is intentionally committed (no secrets — uses env vars)
 
 # ── H2 database files (if file-based H2 is ever used) ─────────────────────────
 *.db
