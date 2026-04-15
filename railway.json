@@ -5,7 +5,8 @@
   },
   "deploy": {
     "startCommand": "java -Dspring.profiles.active=prod -jar target/broadsheet-app-springboot-backend-1.0.0.jar",
-    "healthcheckPath": "/api/auth/login",
+    "healthcheckPath": "/health",
+    "healthcheckTimeout": 120,
     "restartPolicyType": "ON_FAILURE",
     "restartPolicyMaxRetries": 3
   }
